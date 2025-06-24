@@ -7,11 +7,6 @@
 
 # FructureBOT - X-ray Fracture Detection with Deep Learning
 
-![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Medical AI](https://img.shields.io/badge/Medical-AI-red.svg)
-
 A comprehensive deep learning project for automated fracture detection in X-ray images, featuring extensive model comparisons, hyperparameter experiments, and explainable AI techniques for medical diagnosis.
 
 ## 🏥 Project Overview
