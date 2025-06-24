@@ -1,3 +1,10 @@
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Medical AI](https://img.shields.io/badge/Medical-AI-red.svg)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
+
 # FructureBOT - X-ray Fracture Detection with Deep Learning
 
 ![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
