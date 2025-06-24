@@ -1,0 +1,263 @@
+# ============================================================================
+# FructureBOT - Medical AI Project .gitignore
+# ============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+conda_env/
+.conda/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# ============================================================================
+# MACHINE LEARNING SPECIFIC
+# ============================================================================
+
+# Model files (large binary files)
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.weights
+
+# Saved models directory
+models/*.pth
+models/*.pt
+models/*.h5
+models/checkpoints/
+models/saved_models/
+
+# TensorBoard logs
+logs/
+runs/
+tensorboard_logs/
+lightning_logs/
+
+# MLflow
+mlruns/
+.mlflow/
+
+# Weights & Biases
+wandb/
+
+# ============================================================================
+# DATA & DATASETS
+# ============================================================================
+
+# Dataset files (can be large)
+data/
+dataset/
+datasets/
+*.zip
+*.tar.gz
+*.rar
+
+# Specific medical imaging formats
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+
+# CSV data files (if large)
+*.csv
+data.csv
+train.csv
+test.csv
+
+# Image files (if not needed in repo)
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.tif
+
+# ============================================================================
+# RESULTS & OUTPUTS
+# ============================================================================
+
+# Generated results
+results/
+outputs/
+experiments/
+checkpoints/
+predictions/
+
+# Plots and figures
+*.pdf
+figures/
+plots/
+visualizations/
+
+# Reports and documentation builds
+docs/_build/
+site/
+
+# ============================================================================
+# DEVELOPMENT TOOLS
+# ============================================================================
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Spyder
+.spyderproject
+.spyproject
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================================
+# SYSTEM FILES
+# ============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# ============================================================================
+# GOOGLE COLAB / CLOUD SPECIFIC
+# ============================================================================
+
+# Google Drive mounted files
+drive/
+content/
+sample_data/
+
+# Colab specific
+.config/
+
+# ============================================================================
+# MEDICAL AI SPECIFIC
+# ============================================================================
+
+# Patient data (IMPORTANT - Never commit medical data)
+patient_data/
+medical_records/
+phi_data/
+anonymized_data/
+
+# Temporary model outputs
+temp_predictions/
+interim_results/
+cache/
+.cache/
+
+# Large experimental logs
+experiment_logs/
+training_logs/
+*.log
+
+# Configuration files with sensitive info
+config.json
+secrets.json
+api_keys.txt
+credentials.json
+
+# ============================================================================
+# OPTIONAL: Uncomment if needed
+# ============================================================================
+
+# # Keep some result folders but ignore contents
+# results/*
+# !results/.gitkeep
+# 
+# # Keep model directory structure but ignore weights
+# models/*
+# !models/.gitkeep
+# !models/README.md
+
+# # Allow specific small example files
+# !examples/*.png
+# !examples/*.jpg
