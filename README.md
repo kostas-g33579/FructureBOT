@@ -1,7 +1,6 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Medical AI](https://img.shields.io/badge/Medical-AI-red.svg)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 
@@ -9,11 +8,11 @@
 
 A comprehensive deep learning project for automated fracture detection in X-ray images, featuring extensive model comparisons, hyperparameter experiments, and explainable AI techniques for medical diagnosis.
 
-## 🏥 Project Overview
+## Project Overview
 
 This project implements and systematically compares multiple state-of-the-art deep learning architectures for binary fracture classification in X-ray images. The goal is to assist medical professionals in quickly and accurately identifying bone fractures through automated analysis with explainable predictions.
 
-### 🎯 Key Features
+### Key Features
 
 - **Multi-Architecture Comparison**: Custom CNN, ResNet-50, and EfficientNet-B0
 - **Comprehensive Experiments**: Multiple batch sizes, epochs, and data augmentation strategies
@@ -22,12 +21,12 @@ This project implements and systematically compares multiple state-of-the-art de
 - **Professional Structure**: Modular code blocks with extensive documentation
 - **Automated Evaluation**: Confusion matrices, classification reports, and performance metrics
 
-## 🏗️ Architecture Comparison
+## Architecture Comparison
 
 ### Models Implemented:
 
 1. **Custom CNN** - 4-layer architecture with BatchNorm and Dropout
-   - Features: 32→64→128→256 filters with MaxPooling
+   - Features: 32, 64, 128, 256 filters with MaxPooling
    - Classifier: AdaptiveAvgPool + 512-unit dense layer
    - Purpose: Baseline comparison and interpretability
 
@@ -41,7 +40,7 @@ This project implements and systematically compares multiple state-of-the-art de
    - Optimal balance of accuracy, speed, and model size
    - Purpose: Modern efficient architecture benchmark
 
-## 📊 Dataset & Preprocessing
+## Dataset & Preprocessing
 
 - **Source**: Medical X-ray images from bone fracture dataset
 - **Classes**: Fractured vs Normal (non-fractured) bones
@@ -55,7 +54,7 @@ This project implements and systematically compares multiple state-of-the-art de
 - Color jitter (brightness & contrast ±20%)
 - Controlled toggle for augmentation on/off experiments
 
-## 🔬 Experimental Design
+## Experimental Design
 
 The project includes comprehensive hyperparameter experiments:
 
@@ -72,7 +71,7 @@ The project includes comprehensive hyperparameter experiments:
 - **Early Stopping**: Based on validation accuracy
 - **Learning Rate Scheduling**: StepLR with γ=0.1 every 7 epochs
 
-## 📈 Results & Performance
+## Results & Performance
 
 The notebook generates comprehensive performance analysis including:
 
@@ -90,7 +89,7 @@ The notebook generates comprehensive performance analysis including:
 - Model comparison charts
 - LIME explanation visualizations
 
-## 🔍 Explainable AI (XAI)
+## Explainable AI (XAI)
 
 ### LIME Integration:
 - **Local Explanations**: Individual prediction interpretability
@@ -99,11 +98,11 @@ The notebook generates comprehensive performance analysis including:
 - **Clinical Guidelines**: Framework for medical interpretation
 
 ### Medical Interpretation Framework:
-- ✅ **Good Signs**: Focus on bone structures, cortical lines, joint spaces
-- ❌ **Concerning Signs**: Attention to text, equipment, or artifacts
-- 📊 **Evaluation Criteria**: Anatomical relevance, medical logic, consistency
+- **Good Signs**: Focus on bone structures, cortical lines, joint spaces
+- **Concerning Signs**: Attention to text, equipment, or artifacts
+- **Evaluation Criteria**: Anatomical relevance, medical logic, consistency
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 ```bash
@@ -137,10 +136,10 @@ pip install gdown  # For Google Drive dataset download
 !pip install lime opencv-python scikit-image gdown
 
 # Enable GPU
-# Runtime → Change runtime type → Hardware accelerator: GPU
+# Runtime > Change runtime type > Hardware accelerator: GPU
 ```
 
-## 🚀 Usage
+## Usage
 
 
 ### Dataset Setup
@@ -161,38 +160,20 @@ LEARNING_RATE = 0.001
 RANDOM_SEED = 42  # For reproducibility
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 FructureBOT/
-├── README.md                           # This comprehensive guide
-├── requirements.txt                    # Python dependencies
-├── .gitignore                         # Git ignore rules
+├── README.md
+├── requirements.txt
+├── .gitignore
 ├── notebooks/
 │   └── AI_PROJECT_REFINED.ipynb      # Main analysis notebook
-├── models/                            # Saved model weights
-│   ├── simple_cnn_bs20_ep15_weights.pth
-│   ├── resnet-50_bs20_ep15_weights.pth
-│   └── efficientnet-b0_bs40_ep30_weights.pth
-├── results/                           # Experimental results
-│   ├── training_curves/
-│   ├── confusion_matrices/
-│   ├── lime_explanations/
-│   └── performance_comparison.csv
-├── docs/                              # Documentation
-│   ├── methodology.md
-│   ├── medical_guidelines.md
-│   └── experiment_log.md
-└── data/                             # Dataset (if included)
-    ├── train/
-    │   ├── fractured/
-    │   └── normal/
-    └── val/
-        ├── fractured/
-        └── normal/
+├── models/                            # Saved model weights (see models/README.md)
+└── results/                           # Experimental results (see results/README.md)
 ```
 
-## 🔬 Methodology
+## Methodology
 
 ### Training Pipeline:
 1. **Data Preparation**: Automatic download, extraction, and preprocessing
@@ -207,7 +188,7 @@ FructureBOT/
 - **Interpretability**: LIME explanations for clinical decision support
 - **Validation**: Medical interpretation guidelines for AI explanations
 
-## 📊 Key Findings & Insights
+## Key Findings & Insights
 
 Based on experimental results:
 
@@ -222,7 +203,7 @@ Based on experimental results:
 - **Class Weighting Crucial**: 2:1 weighting significantly improves fracture detection recall
 - **Clinical Validation**: Manual review of LIME explanations essential for medical deployment
 
-## 🔄 Future Improvements
+## Future Improvements
 
 - [ ] **Advanced Architectures**: Vision Transformers (ViT), DenseNet variants
 - [ ] **Multi-Class Extension**: Specific fracture type classification
@@ -233,7 +214,7 @@ Based on experimental results:
 - [ ] **Larger Datasets**: Multi-institutional validation
 - [ ] **Real-time Processing**: Optimization for clinical deployment
 
-## 📚 Technical Documentation
+## Technical Documentation
 
 ### Block Structure:
 - **Block 0**: Environment setup and dataset cleaning
@@ -251,21 +232,21 @@ Based on experimental results:
 - **Comprehensive Logging**: Detailed progress and results tracking
 - **Medical Focus**: Class weighting and clinical metrics priority
 
-## 🏥 Medical Validation Guidelines
+## Medical Validation Guidelines
 
 ### Anatomical Focus Areas:
-- ✅ Cortical bone lines and discontinuities
-- ✅ Joint spaces and alignment
-- ✅ Bone density variations
-- ✅ Common fracture locations (distal radius, metacarpals)
+- Cortical bone lines and discontinuities
+- Joint spaces and alignment
+- Bone density variations
+- Common fracture locations (distal radius, metacarpals)
 
 ### Red Flags for AI Explanations:
-- ❌ Focus on text annotations or labels
-- ❌ Attention to medical equipment
-- ❌ Background artifacts or positioning aids
-- ❌ Non-anatomical features
+- Focus on text annotations or labels
+- Attention to medical equipment
+- Background artifacts or positioning aids
+- Non-anatomical features
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Please focus on:
 - **Medical Accuracy**: Ensure clinical relevance
@@ -273,18 +254,14 @@ Contributions welcome! Please focus on:
 - **Documentation**: Clear methodology description
 - **Validation**: Thorough testing with medical datasets
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Medical Community**: For fracture detection clinical guidelines
 - **PyTorch Team**: For deep learning framework
 - **LIME Developers**: For explainable AI capabilities
 - **Dataset Contributors**: For providing medical imaging data
 
-## 📞 Contact & Citation
+## Contact & Citation
 
 **Author**: Kostas Plomaritis  
 **Institution**: [AUTh University - BioMedical Engineering]  
@@ -304,7 +281,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```
 
 ---
-
-⭐ **If this project helps your research or clinical work, please give it a star!** ⭐
 
 > **Medical Disclaimer**: This tool is for research purposes only and should not replace professional medical diagnosis. Always consult qualified healthcare professionals for medical decisions.
